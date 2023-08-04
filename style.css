@@ -6,8 +6,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Righteous", cursive;
+  -webkit-tap-highlight-color: transparent;
   transition: all 0.5s ease-out;
 }
+
 
 /* Variables */
 :root {
@@ -94,6 +96,7 @@ body.light {
   position: relative;
   width: 500px;
   height: 500px;
+  user-select: none;
 }
 
 .game-container {
@@ -323,17 +326,17 @@ h3 {
 }
 
 @media (max-width: 340px) {
-    .cell {
-        font-size: 2.5rem;
-    }
+  .cell {
+    font-size: 2.5rem;
+  }
 
-    .win-menu .title {
-        font-size: 3rem;
-    }
+  .win-menu .title {
+    font-size: 3rem;
+  }
 
-    .win-btn {
-        width: 60%;
-        height: 50px;
-        font-size: 1.6rem;
-    }
+  .win-btn {
+    width: 60%;
+    height: 50px;
+    font-size: 1.6rem;
+  }
 }
