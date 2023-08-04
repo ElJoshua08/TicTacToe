@@ -129,7 +129,3 @@ theme_toggle.onclick = (e) => {
 };
 
 onStart();
-
-body.onclick = () => {
-  console.log(letter);
-};
