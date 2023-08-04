@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Righteous&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Righteous', cursive;
+    transition: all 0.5s ease-out;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    transition: none;
+    background-color: rgb(0, 0, 0);
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: space-between;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    box-shadow: 21px 29px 40px -1px rgba(71,71,71,1);
+    background: #2e2e2e;
+    border-radius: 20px;
+    opacity: 0;
+    cursor: auto;
+}
+
+.game-container.active {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 0 0 5px #fff;
+    font-size: 6em;
+    opacity: 0;
+}
+
+.cell.active {
+    opacity: 1;
+}
+
+i {
+    transform: scale(0);
+}
+
+.cell.active i {
+    transform: scale(1);
+}
+
+.turn {
+    position: relative;
+    margin-left: 200px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0;
+    user-select: none;
+}
+
+.turn.active {
+    opacity: 1;
+}
+
+h2 {
+    color: yellow;
+    text-shadow: 0 0 5px yellow;
+    font-size: 5em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+.line {
+    display: none;
+}
+
+.win-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 600px;
+    height: 400px;
+    transform: scale(0);
+    border-radius: 20px;
+    background-color: #2e2e2e;
+    box-shadow: 21px 29px 40px -1px rgba(71,71,71,1);
+    user-select: none;
+}
+
+.win-menu.active {
+    transform: scale(1);
+}
+
+.win-menu.active ~ .game-container {
+    opacity: 0.5;
+}
+
+.win-menu h1 {
+    color: yellow;
+    font-size: 6em;
+    text-shadow: 0 0 5px yellow;
+}
+
+.win-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 70px;
+    overflow: hidden;
+    color: #fff;
+    outline: 0;
+    border: 0;
+    font-size: 3em;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid yellow;
+    background-color: #315700;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.5s ease-out;
+}
+
+.win-btn:hover {
+    transition: all 0.5s ease-out;
+    transform: translate(0, -10%);
+    background-color: rgb(134, 134, 0);
+}
